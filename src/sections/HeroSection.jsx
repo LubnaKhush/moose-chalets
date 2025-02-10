@@ -4,7 +4,7 @@ import "swiper/css"; // Import Swiper styles
 import "swiper/css/navigation"; // Import Navigation styles
 import "swiper/css/pagination"; // Import Pagination styles
 import { Navigation, Pagination, Autoplay } from "swiper/modules"; // Import necessary modules
-import { useEffect } from "react";
+
 import Image from "next/image";
 
 const images = [
@@ -35,7 +35,7 @@ const images = [
     description: "Take a break and enjoy serene surroundings.",
   },
   {
-    src: "/assets/image8.jpeg",
+    src: "/assets/OutSide.jpg",
     title: "Peaceful Escape ",
     description: " Relax in quiet, tranquil settings.",
   },

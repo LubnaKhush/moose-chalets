@@ -54,7 +54,6 @@ const Footer = () => {
             >
               <TiSocialFacebook />
             </a>
-           
           </div>
         </div>
 
@@ -115,8 +114,13 @@ const Footer = () => {
               <FaPhoneAlt className="text-lg" /> +92 3124295679
             </li>
             <li className="flex items-center gap-2">
-              <CgMail className="text-lg" />
-              moosechalet@gmail.com
+              <a
+                href="mailto:moosechalet@gmail.com"
+                className="flex items-center gap-2"
+              >
+                <CgMail className="text-lg" />
+                moosechalet@gmail.com
+              </a>
             </li>
             <li className="flex items-center gap-2">
               <IoLocationSharp className="text-lg" />
@@ -125,11 +129,11 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <div className="bg-[#123a1a] border-t-2 opacity-95 text-center pt-6 text-sm">
-        Copyright © 2024 Moose Chalets. All rights reserved <br />
+      <div className="bg-[#123a1a] border-t-2 opacity-95 text-center pt-6 md:pt-4 text-sm">
+        Copyright © 2025 Moose Chalets. All rights reserved <br />
         <div className="flex justify-center gap-1 mt-1  pb-3 ">
           <p className="text-xs text-green-300 ">
-            Developed by <strong>Ch Umar Aslam</strong>
+            Developed by <strong>Umar Aslam</strong>
           </p>
         </div>
       </div>

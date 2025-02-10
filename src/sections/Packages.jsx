@@ -71,7 +71,7 @@ function RoomCategories() {
           price="Rs. 15,000 per night"
           buttonText="Book Now"
           services={[
-            "Breakfast included",
+            "Breakfast",
             "King-size bed",
             "Max 3 guests",
             "Ground Floor or First Floor",
@@ -86,7 +86,7 @@ function RoomCategories() {
           price="Rs. 15,000 per night"
           buttonText="Book Now"
           services={[
-            "Breakfast included",
+            "Breakfast",
             "2 single beds",
             "Max 3 guests",
             "Ground Floor or First Floor",
@@ -101,11 +101,11 @@ function RoomCategories() {
           price="Rs. 13,000 per night"
           buttonText="Book Now"
           services={[
-            "Witout Breakfast",
+            "Without Breakfast",
             "King-size bed",
             "Max 3 guests",
             "Ground Floor or First Floor",
-            "2 rooms available",
+            "2 Rooms available",
             "Extra Mattress Provided on Request",
           ]}
         />

@@ -7,6 +7,11 @@ import ServicesImage1 from "../../public/assets/services-image1.jpeg";
 import ServicesImage2 from "../../public/assets/services-image2.jpeg";
 import servicesImage5 from "../../public/assets/img-services.jpeg"
 import ServicesImage4 from "../../public/assets/services-image4.svg";
+import {  FaParking} from 'react-icons/fa';
+// import { LuCircleParking } from "react-icons/lu";
+import { TbToolsKitchen2 } from "react-icons/tb";
+
+
 import Image from "next/image";
 
 export default function Services() {
@@ -25,8 +30,8 @@ export default function Services() {
           Experience exceptional hospitality tailored to meet your every need.
         </p>
       </div>
-      <div className=" mt-5 md:mt-12 grid grid-cols-1 gap-y-10 sm:grid-cols-2 sm:gap-x-8 lg:grid-cols-4 lg:gap-10">
-        <div className="flex flex-col justify-between p-6  rounded-lg shadow-md">
+      <div className=" mt-5 md:mt-12 grid grid-cols-1 gap-y-10 sm:grid-cols-2 sm:gap-x-8 lg:grid-cols-3 lg:gap-10">
+        <div className="flex  flex-col justify-between p-6  bg-white  rounded-lg shadow-md">
           <div className="flex items-center justify-center mx-auto mb-5">
             <Image
               src={serviceImage}
@@ -45,7 +50,7 @@ export default function Services() {
             right to your door anytime.
           </p>
         </div>
-        <div className="flex flex-col justify-between p-6  rounded-lg shadow-md">
+        <div className="flex flex-col justify-between p-6 bg-white   rounded-lg shadow-md">
           <div className="flex items-center justify-center mx-auto mb-5">
             <Image
               src={wifiImage}
@@ -64,7 +69,7 @@ export default function Services() {
             the hotel for your convenience.
           </p>
         </div>
-        <div className="flex flex-col justify-between p-6  rounded-lg shadow-md">
+        <div className="flex flex-col justify-between p-6 bg-white  rounded-lg shadow-md">
           <div className="flex items-center justify-center mx-auto mb-5">
             <Image
               src={securityImage}
@@ -83,7 +88,7 @@ export default function Services() {
             safe and secure environment.
           </p>
         </div>
-        <div className="flex flex-col justify-between p-6  rounded-lg shadow-md">
+        <div className="flex flex-col justify-between p-6 bg-white   rounded-lg shadow-md">
           <div className="flex items-center justify-center mx-auto mb-5">
             <Image
               src={waterImage}
@@ -100,6 +105,42 @@ export default function Services() {
           <p className="mt-2 text-sm text-gray-500 text-center">
             Enjoy warm water in your room for a relaxing experience any time you
             need it.
+          </p>
+        </div>
+        <div className="flex flex-col justify-between p-6 bg-white  rounded-lg shadow-md">
+          <div className="flex items-center justify-center mx-auto mb-5">
+          <TbToolsKitchen2 
+            
+            height={40}
+            width={40}
+      
+            className="w-10  text-heading h-10"
+     
+          />
+          </div>
+          <h3 className="text-lg font-medium text-center leading-6 text-gray-900">
+          Self-Service Kitchen
+          </h3>
+          <p className="mt-2 text-sm text-gray-500 text-center">
+          Make yourself at home with our fully-equipped self-service kitchen, available for use at any time, so you can prepare your favorite meals whenever you wish.
+          </p>
+        </div>
+        <div className="flex flex-col justify-between p-6 bg-white  rounded-lg shadow-md">
+          <div className="flex items-center justify-center mx-auto mb-5">
+            <FaParking
+            
+              height={40}
+              width={40}
+        
+              className="w-10 h-10 text-heading"
+       
+            />
+          </div>
+          <h3 className="text-lg font-medium text-center leading-6 text-gray-900">
+          24/7 Parking Access
+          </h3>
+          <p className="mt-2 text-sm text-gray-500 text-center">
+          Enjoy the convenience of 24/7 parking with secure and easily accessible spaces, ensuring you always have a spot when you need it.
           </p>
         </div>
       </div>

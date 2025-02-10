@@ -3,10 +3,10 @@ import React from "react";
 import AboutSection from "../../public/assets/who-we-are.webp";
 const WhoWeAre = () => {
   return (
-    <section className="bg-gray-100 ">
+    <section className="bg-sectionBackground container mx-auto ">
       <div
         id="about"
-        className="container mx-auto pt-16 md:pb-12 px-4 sm:px-4   text-justify md:text-center"
+        className=" pt-16 md:pb-12 px-4 sm:px-4   text-justify md:text-center"
       >
         <h2 className="text-3xl md:text-4xl text-center font-Poppins font-bold mb-6 text-heading">
           Who We Are?
@@ -28,7 +28,7 @@ const WhoWeAre = () => {
           src={AboutSection}
           height={1060}
           width={1920}
-          alt="hero-section-image"
+          alt="hero-section-image "
         />
       </div>
     </section>
