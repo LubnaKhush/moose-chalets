@@ -5,12 +5,11 @@ import serviceImage from "../../public/assets/room-service.svg";
 import waterImage from "../../public/assets/hot-water.svg";
 import ServicesImage1 from "../../public/assets/services-image1.jpeg";
 import ServicesImage2 from "../../public/assets/services-image2.jpeg";
-import servicesImage5 from "../../public/assets/img-services.jpeg"
+import servicesImage5 from "../../public/assets/img-services.jpeg";
 import ServicesImage4 from "../../public/assets/services-image4.svg";
-import {  FaParking} from 'react-icons/fa';
+import { FaAppleAlt, FaMugHot, FaParking, FaSolarPanel } from "react-icons/fa";
 // import { LuCircleParking } from "react-icons/lu";
 import { TbToolsKitchen2 } from "react-icons/tb";
-
 
 import Image from "next/image";
 
@@ -31,6 +30,18 @@ export default function Services() {
         </p>
       </div>
       <div className=" mt-5 md:mt-12 grid grid-cols-1 gap-y-10 sm:grid-cols-2 sm:gap-x-8 lg:grid-cols-3 lg:gap-10">
+      <div className="flex flex-col justify-between p-6 bg-white rounded-lg shadow-md">
+  <div className="flex items-center justify-center mx-auto mb-5">
+    <FaMugHot className="w-10 h-10 text-heading" />
+  </div>
+  <h3 className="text-lg font-medium text-center leading-6 text-gray-900">
+    Complimentary Welcome Tea
+  </h3>
+  <p className="mt-2 text-sm text-gray-500 text-center">
+    Enjoy a warm and refreshing cup of tea upon arrival, made with premium 
+    local ingredients to start your stay with comfort.
+  </p>
+</div>
         <div className="flex  flex-col justify-between p-6  bg-white  rounded-lg shadow-md">
           <div className="flex items-center justify-center mx-auto mb-5">
             <Image
@@ -109,40 +120,67 @@ export default function Services() {
         </div>
         <div className="flex flex-col justify-between p-6 bg-white  rounded-lg shadow-md">
           <div className="flex items-center justify-center mx-auto mb-5">
-          <TbToolsKitchen2 
-            
-            height={40}
-            width={40}
-      
-            className="w-10  text-heading h-10"
-     
-          />
+            <TbToolsKitchen2
+              height={40}
+              width={40}
+              className="w-10  text-heading h-10"
+            />
           </div>
           <h3 className="text-lg font-medium text-center leading-6 text-gray-900">
-          Self-Service Kitchen
+            Self-Service Kitchen
           </h3>
           <p className="mt-2 text-sm text-gray-500 text-center">
-          Make yourself at home with our fully-equipped self-service kitchen, available for use at any time, so you can prepare your favorite meals whenever you wish.
+            Make yourself at home with our fully-equipped self-service kitchen,
+            available for use at any time, so you can prepare your favorite
+            meals whenever you wish.
           </p>
         </div>
         <div className="flex flex-col justify-between p-6 bg-white  rounded-lg shadow-md">
           <div className="flex items-center justify-center mx-auto mb-5">
             <FaParking
-            
               height={40}
               width={40}
-        
               className="w-10 h-10 text-heading"
-       
             />
           </div>
           <h3 className="text-lg font-medium text-center leading-6 text-gray-900">
-          24/7 Parking Access
+            24/7 Parking Access
           </h3>
           <p className="mt-2 text-sm text-gray-500 text-center">
-          Enjoy the convenience of 24/7 parking with secure and easily accessible spaces, ensuring you always have a spot when you need it.
+            Enjoy the convenience of 24/7 parking with secure and easily
+            accessible spaces, ensuring you always have a spot when you need it.
           </p>
         </div>
+
+        <div className="flex flex-col justify-between p-6 bg-white rounded-lg shadow-md">
+        <div className="flex items-center justify-center mx-auto mb-5">
+          <FaSolarPanel className="w-10 h-10 text-heading" />
+        </div>
+        <h3 className="text-lg font-medium text-center leading-6 text-gray-900">
+          Solar Electricity Backup
+        </h3>
+        <p className="mt-2 text-sm text-gray-500 text-center">
+          Experience uninterrupted power with our eco-friendly solar electricity
+          backup, ensuring sustainability and reliability.
+        </p>
+      </div>
+
+      {/* Organic Fruits - Cherries & Apples */}
+      <div className="flex flex-col justify-between p-6 bg-white rounded-lg shadow-md">
+        <div className="flex items-center justify-center mx-auto mb-5">
+          <FaAppleAlt className="w-10 h-10 text-heading" />
+        </div>
+        <h3 className="text-lg font-medium text-center leading-6 text-gray-900">
+          Organic Fruits
+        </h3>
+        <p className="mt-2 text-sm text-gray-500 text-center">
+          Enjoy fresh organic cherries 🍒 and apples 🍎, available during the
+          season for a healthy and delightful experience.
+        </p>
+      </div>
+
+
+
       </div>
 
       <div className="space-y-4 md:space-y-12 px-3 mt-8 md:mt-24  font-Poppins">
@@ -213,14 +251,14 @@ export default function Services() {
         </div>
         {/* section 3 */}
         <div>
-          <div className="flex flex-col md:flex-row  gap-4 xl:gap-6">
+          <div className="flex flex-col md:flex-row  md:max-h-[550px] gap-4 xl:gap-6">
             <div className="md:w-1/2">
               <Image
                 src={servicesImage5}
                 width={1000}
                 height={1000}
                 alt="Mountain-Facing Room"
-                className="  w-full  h-[90%] my-6  object-cover rounded-[20px]"
+                className="  w-full h-[90%]  my-6  object-cover rounded-[20px]"
               />
             </div>
 

@@ -207,7 +207,7 @@ const ContactForm = () => {
             </label>
             <textarea
               rows={4}
-              placeholder="Briefly add your message"
+          placeholder="Briefly add booking services (e.g., breakfast, mattress, first floor)"
               id="message"
               className="shadow-lg shadow-gray-200 border-none  bg-gray-100 py-4 appearance-none border rounded w-full  px-3 text-heading leading-tight focus:outline-none focus:shadow-outline"
               value={message}
@@ -318,7 +318,7 @@ const ContactForm = () => {
               onClick={()=>setIsModalOpen(true)}
               className=" bg-gray-100   border border-gray-800 w-full text-heading font-bold py-2  px-6 rounded-lg shadow-lg transition-transform transform hover:bg-gray-200 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-opacity-50"
             >
-              Read Note
+              Payment Options
             </button>
 {         status   && <BookingConfirmation  />} 
 

@@ -68,13 +68,13 @@ function RoomCategories() {
           title="King Bed Room"
           description="Enjoy panoramic valley views from a spacious king-size bed room, complete with a private balcony and Jacuzzi."
           roomImage={Room1}
-          price="Rs. 15,000 per night"
+          price="Rs. 18,000/day"
           buttonText="Book Now"
           services={[
-            "Breakfast",
+          
+            'Ground Floor',
             "King-size bed",
             "Max 3 guests",
-            "Ground Floor or First Floor",
             "4 rooms available",
             "Extra Mattress Provided on Request",
           ]}
@@ -83,32 +83,32 @@ function RoomCategories() {
           title="Twin Bed Room"
           description="A cozy twin bed room with panoramic valley views, private balcony, and Jacuzzi for ultimate relaxation."
           roomImage={Room2}
-          price="Rs. 15,000 per night"
+          price="Rs. 16,000/day"
           buttonText="Book Now"
           services={[
-            "Breakfast",
+           
+            "First Floor",
             "2 single beds",
             "Max 3 guests",
-            "Ground Floor or First Floor",
             "2 rooms available",
             "Extra Mattress Provided on Request",
           ]}
         />
-        <RoomCard
-          title="First Floor Room"
-          description="An elegant suite with stunning valley views, king-size bed, private balcony, and Jacuzzi for a luxurious stay."
-          roomImage={Room3}
-          price="Rs. 13,000 per night"
-          buttonText="Book Now"
-          services={[
-            "Without Breakfast",
-            "King-size bed",
-            "Max 3 guests",
-            "Ground Floor or First Floor",
-            "2 Rooms available",
-            "Extra Mattress Provided on Request",
-          ]}
-        />
+ <RoomCard
+  title="Breakfast Add-On"
+  description="Enhance your stay with a premium breakfast experience for Rs. 2,000/day."
+  roomImage={Room2} // Replace with a relevant image
+  price="+ Rs. 2,000/day"
+  buttonText="Book Now"
+  services={[
+    "Fresh & Organic Meals",
+    "Traditional & Continental Options",
+    "Served in-room or restaurant",
+    "Variety of Hot & Cold Beverages",
+    "Nutritious & Balanced Choices",
+    "Customized Dietary Options Available",
+  ]}
+/>
       </div>
     </div>
   );

@@ -132,9 +132,13 @@ const Footer = () => {
       <div className="bg-[#123a1a] border-t-2 opacity-95 text-center pt-6 md:pt-4 text-sm">
         Copyright © 2025 Moose Chalets. All rights reserved <br />
         <div className="flex justify-center gap-1 mt-1  pb-3 ">
+         
+        <a href="https://github.com/CH-Umar-Aslam" target="_blank">
+
           <p className="text-xs text-green-300 ">
             Developed by <strong>Umar Aslam</strong>
           </p>
+          </a>
         </div>
       </div>
     </div>
