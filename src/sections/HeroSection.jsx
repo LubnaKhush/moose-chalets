@@ -69,7 +69,7 @@ export default function HeroSection() {
           nextEl: ".swiper-button-next",
         }}
         pagination={{ clickable: true }}
-        autoplay={{ delay: 1700 }} // Set autoplay delay
+        autoplay={{ delay: 3000 }} // Set autoplay delay
         className="h-full"
       >
         {images.map((image, index) => (
@@ -83,11 +83,11 @@ export default function HeroSection() {
               alt={image.title}
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-black bg-opacity-45 flex flex-col  justify-center sm:items-center text-white p-4">
+            <div className="absolute inset-0 bg-black bg-opacity-15 flex flex-col  justify-center sm:items-center text-white p-4">
               <h2 className="text-2xl sm:text-4xl font-Poppins  font-bold mb-2 t">
                 {image.title}
               </h2>
-              <p className="text-base sm:text-lg">{image.description}</p>
+              <p className="text-base bg-heading bg-opacity-30 p-2 rounded-lg sm:text-[19px]">{image.description}</p>
             </div>
           </SwiperSlide>
         ))}
