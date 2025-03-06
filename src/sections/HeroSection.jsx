@@ -47,7 +47,7 @@ const images = [
   {
     src: "/assets/image7.jpeg",
     title: "Dine with a View",
-    description: "Create unforgettable memories at Mossess Chalets.",
+    description: "Create unforgettable memories at Moose Chalets.",
   },
   {
     src: "/assets/image11.jpeg",
