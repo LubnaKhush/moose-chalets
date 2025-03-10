@@ -40,7 +40,7 @@ const images = [
     description: " Relax in quiet, tranquil settings.",
   },
   {
-    src: "/assets/image9.jpeg",
+    src: "/assets/outdoor-slider.jpg",
     title: "Explore the Outdoors",
     description: "Adventure awaits with hiking, biking, and more.",
   },
@@ -87,7 +87,7 @@ export default function HeroSection() {
               <h2 className="text-2xl sm:text-4xl font-Poppins  font-bold mb-2 t">
                 {image.title}
               </h2>
-              <p className="text-base bg-heading bg-opacity-30 p-2 rounded-lg sm:text-[19px]">{image.description}</p>
+              <p className="text-base bg-heading bg-opacity-20 p-2 rounded-lg sm:text-[19px]">{image.description}</p>
             </div>
           </SwiperSlide>
         ))}
