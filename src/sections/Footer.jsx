@@ -30,9 +30,9 @@ const Footer = () => {
         backgroundRepeat: "no-repeat",
       }}
     >
-      {/* Overlay to control opacity of content while keeping the background image fully visible */}
+     
       <div className="bg-[#123a1a]  opacity-90 py-16 px-6 md:px-12 flex flex-col md:flex-row justify-between space-y-8 md:space-y-0">
-        {/* About Section */}
+      
         <div className="flex-1">
           <h2 className="text-lg font-semibold  border-l-[7px] p-[10px] border-[#19F745]">
             Stunning Valley Views
