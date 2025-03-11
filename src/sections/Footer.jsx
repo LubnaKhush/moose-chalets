@@ -24,7 +24,7 @@ const Footer = () => {
       id="footer"
       className="relative  w-full text-white"
       style={{
-        backgroundImage: `url('/assets/image.png')`, // Directly reference the image path
+        backgroundImage: `url('/assets/image.webp')`, // Directly reference the image path
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
