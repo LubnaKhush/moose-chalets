@@ -21,7 +21,7 @@ const PaymentModal = ({ isOpen, onClose }) => {
                 <br />
               IBAN:PK06MPBL0285027140144806</strong>
             </p>
-            <p className="">
+            <p >
               After the transfer, please keep a screenshot of the payment and attach in booking form.
             </p>
           </div>
