@@ -1,3 +1,4 @@
+import Blogs from "@/sections/Blogs";
 import ContactForm from "@/sections/Contact";
 import Footer from "@/sections/Footer";
 import HeroSection from "@/sections/HeroSection";
@@ -11,15 +12,15 @@ import React from "react";
 function Home() {
   return (
     <div>
-      <Navbar />
+    
       <HeroSection />
       <WhoWeAre />
       <Services />
       <RoomCategories />
+      <Blogs/>
       <Testimonials />
       <ContactForm />
-
-      <Footer />
+  
     </div>
   );
 }

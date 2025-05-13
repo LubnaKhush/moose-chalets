@@ -36,7 +36,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex items-center justify-center flex-grow space-x-8">
+        <div className="hidden lg:flex items-center justify-center flex-grow space-x-8">
           <Link
             onClick={(e) => {
               e.preventDefault();
@@ -90,7 +90,7 @@ export default function Navbar() {
         >
           <button
             type="button"
-            className="hidden md:block bg-heading hover:bg-subHeading text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2"
+            className="hidden lg:block bg-heading hover:bg-subHeading text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2"
           >
             Book Now
           </button>
@@ -99,7 +99,7 @@ export default function Navbar() {
         {/* Hamburger button for mobile */}
         <button
           onClick={toggleMenu}
-          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-900 dark:focus:ring-gray-600"
+          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg lg:hidden hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-900 dark:focus:ring-gray-600"
           aria-controls="navbar-sticky"
           aria-expanded={isMenuOpen}
         >
@@ -126,7 +126,7 @@ export default function Navbar() {
       <div
         className={`fixed inset-0 z-10 bg-heading transition-transform duration-300 transform ${
           isMenuOpen ? "translate-x-0" : "translate-x-full"
-        } md:hidden`}
+        } lg:hidden`}
       >
         <div className="flex flex-col items-start p-4 space-y-2">
           <div className="flex justify-between w-full">
