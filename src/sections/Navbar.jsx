@@ -112,7 +112,7 @@ export default function Navbar() {
             href="#"
             className="block py-2 px-3 text-gray-800 rounded hover:bg-heading hover:text-white"
           >
-            Blog
+            Blogs
           </Link>
 
           <Link
