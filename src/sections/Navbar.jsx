@@ -1,12 +1,20 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const router = useRouter()
   const scrollTo = (id) => {
-    const section = document.getElementById(id);
+  const section = document.getElementById(id);
+const fullUrl = window.location.pathname;
+console.log(fullUrl);
+if (fullUrl!=="/"){
+  router.push('/')
+  }
+
+    
     setIsMenuOpen(false);
 
     if (section) {
@@ -66,6 +74,16 @@ export default function Navbar() {
             className="block py-2 px-3 text-gray-800 rounded hover:bg-heading hover:text-white"
           >
             Services
+          </Link>
+<Link
+            onClick={(e) => {
+              e.preventDefault();
+              scrollTo("blog");
+            }}
+            href="#"
+            className="block py-2 px-3 text-gray-800 rounded hover:bg-heading hover:text-white"
+          >
+            Blog
           </Link>
 
           <Link

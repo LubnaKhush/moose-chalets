@@ -59,7 +59,7 @@ export default async function Blogs() {
   const blogs = await fetchBlogs();
 
   return (
-    <div className="w-full bg-sectionBackground py-16 px-6">
+    <div id="blog" className="w-full bg-sectionBackground py-16 px-6">
       <Head>
         <title>Moose Chalets Blog</title>
       </Head>
