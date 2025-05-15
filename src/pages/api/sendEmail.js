@@ -53,6 +53,11 @@ const handler = async (req, res) => {
           mattressOption ? " needed " : "not needed"
         } The date of my reservation is <strong>${date}</strong>.</p>
       <p>Email: ${email}</p>
+
+                  <br>
+<br>
+<small>For any queries contact us at moosechalet@gmail.com</small>
+
     </div>
   `,
         attachments: attachment
@@ -70,10 +75,10 @@ const handler = async (req, res) => {
       const clientMailOptions = { 
         from: process.env.EMAIL_USER,
         to: email,
-        subject: "Your Submission Details",
+        subject: "Your Booking Details",
         html: `
           <div style="font-family: Arial, sans-serif; line-height: 1.5; color: #333;">
-            <h2 style="color: #0056b3;">Your Submission Details</h2>
+            <h2 style="color: #0056b3;">Your Booking Details</h2>
             <p>Hello <strong>${name}</strong>,</p>
             <p>Thank you for your submission! Here are the details we received:</p>
             <p><strong>Phone:</strong> ${phone}</p>
@@ -85,6 +90,10 @@ const handler = async (req, res) => {
               mattressOption || "not needed"
             }</p>
             <p><strong>Date:</strong> ${date}</p>
+            <br>
+<br>
+<small>For any queries contact us at moosechalet@gmail.com</small>
+
           </div>
         `,
         attachments: attachment
