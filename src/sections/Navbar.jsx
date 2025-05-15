@@ -1,31 +1,60 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
-import { useRouter } from "next/router";
 
 export default function Navbar() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const router = useRouter()
-  const scrollTo = (id) => {
-  const section = document.getElementById(id);
-const fullUrl = window.location.pathname;
-console.log(fullUrl);
-if (fullUrl!=="/"){
-  router.push('/')
-  }
 
-    
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const scrollTo = (id) => {
+ 
+    const isHomePage =
+      window.location.pathname === "/" ||
+      window.location.pathname === "" ||
+      window.location.pathname === "/index";
+
+    if (!isHomePage) {
+      window.location.href = `/#${id}`;
+      return;
+    }
+
     setIsMenuOpen(false);
 
+    const section = document.getElementById(id);
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
+
+      setTimeout(() => {
+        history.replaceState(null, "", window.location.pathname);
+      }, 10);
     }
   };
-
   const toggleMenu = () => {
     setIsMenuOpen((prev) => !prev);
   };
 
+  useEffect(() => {
+    const handleHashScroll = () => {
+      const hash = window.location.hash;
+      if (hash) {
+        const id = hash.replace("#", "");
+        setTimeout(() => {
+          const section = document.getElementById(id);
+          if (section) {
+            section.scrollIntoView({ behavior: "smooth" });
+
+            setTimeout(() => {
+              history.replaceState(null, "", window.location.pathname);
+            }, 10);
+          }
+        }, 10); 
+      }
+    };
+
+    // Call handler when component mounts
+    handleHashScroll();
+  }, []); //
   return (
     <nav className="bg-white sm:px-8 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
       <div className="max-w-screen-xl flex items-center justify-between mx-auto p-4">
@@ -75,7 +104,7 @@ if (fullUrl!=="/"){
           >
             Services
           </Link>
-<Link
+          <Link
             onClick={(e) => {
               e.preventDefault();
               scrollTo("blog");
@@ -142,7 +171,7 @@ if (fullUrl!=="/"){
 
       {/* Mobile Menu */}
       <div
-        className={`fixed inset-0 z-10 bg-heading transition-transform duration-300 transform ${
+        className={`fixed inset-0 z-10 bg-gradient-to-t from-[#000000] to-[#287530] bg-heading transition-transform duration-300 transform ${
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         } lg:hidden`}
       >
@@ -158,10 +187,7 @@ if (fullUrl!=="/"){
             >
               Moose Chalets
             </Link>
-            <button
-              onClick={toggleMenu}
-              className="text-gray-300 rounded p-2"
-            >
+            <button onClick={toggleMenu} className="text-gray-300 rounded p-2">
               <svg
                 className="w-5 h-5"
                 fill="none"
@@ -201,6 +227,16 @@ if (fullUrl!=="/"){
           <Link
             onClick={(e) => {
               e.preventDefault();
+              scrollTo("blog");
+            }}
+            href="#"
+            className="block py-2 px-3 text-white rounded hover:bg-subHeading w-full text-left"
+          >
+            Blogs
+          </Link>
+          <Link
+            onClick={(e) => {
+              e.preventDefault();
               scrollTo("testimonials");
             }}
             href="#"
@@ -229,7 +265,7 @@ if (fullUrl!=="/"){
           >
             <button
               type="button"
-              className="border-2  border-green-400    hover:bg-subHeading focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 w-full text-center text-white"
+              className="border-2 border-green-400 hover:bg-subHeading focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 w-full text-center text-white"
             >
               Book Now
             </button>

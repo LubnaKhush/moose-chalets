@@ -66,13 +66,13 @@ function RoomCategories() {
       <div className=" grid grid-cols-1 place- md:grid-cols-2 lg:grid-cols-3 gap-6">
         <RoomCard
           title="King Bed Room"
-          description="Enjoy panoramic valley views from a spacious king-size bed room, complete with a private balcony and Jacuzzi."
+          description="Relax in a spacious king-size bedroom featuring stunning valley views and a private balcony for your comfort."
           roomImage={Room1}
           price="Rs. 18,000/day"
           buttonText="Book Now"
           services={[
           
-            'Ground Floor',
+            'Ground Floor', 
             "King-size bed",
             "Max 3 guests",
             "4 rooms available",
@@ -81,7 +81,7 @@ function RoomCategories() {
         />
         <RoomCard
           title="Twin Bed Room"
-          description="A cozy twin bed room with panoramic valley views, private balcony, and Jacuzzi for ultimate relaxation."
+          description="A cozy twin bed room with panoramic valley views and a private balcony for ultimate relaxation."
           roomImage={Room2}
           price="Rs. 18,000/day"
           buttonText="Book Now"
