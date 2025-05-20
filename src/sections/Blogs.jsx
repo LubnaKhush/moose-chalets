@@ -1,4 +1,5 @@
-"use client";
+export const revalidate = 60;
+// "use client";
 
 import React from "react";
 import { createClient } from "contentful";
@@ -6,6 +7,8 @@ import Head from "next/head";
 import { FaArrowRight } from "react-icons/fa";
 import ReactMarkdown from "react-markdown";
 import Link from "next/link";
+
+
 
 // Setup Contentful client
 const client = createClient({
