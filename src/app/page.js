@@ -1,3 +1,4 @@
+export const revalidate = 60;
 import Blogs from "@/sections/Blogs";
 import ContactForm from "@/sections/Contact";
 import Footer from "@/sections/Footer";

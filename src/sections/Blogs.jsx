@@ -1,5 +1,4 @@
-export const revalidate = 60;
-// "use client";
+"use client";
 
 import React from "react";
 import { createClient } from "contentful";
