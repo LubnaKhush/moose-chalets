@@ -65,6 +65,21 @@ function RoomCategories() {
       </p>
       <div className=" grid grid-cols-1 place- md:grid-cols-2 lg:grid-cols-3 gap-6">
         <RoomCard
+          title="Twin Bed Room"
+          description="A cozy twin bed room with panoramic valley views and a private balcony for ultimate relaxation."
+          roomImage={Room2}
+          price="Rs. 20,000/day"
+          buttonText="Book Now"
+          services={[
+           
+            "First Floor",
+            "2 single beds",
+            "Max 3 guests",
+            "2 rooms available",
+            "Extra Mattress Provided on Request",
+          ]}
+        />
+        <RoomCard
           title="King Bed Room"
           description="Relax in a spacious king-size bedroom featuring stunning valley views and a private balcony for your comfort."
           roomImage={Room1}
@@ -76,21 +91,6 @@ function RoomCategories() {
             "King-size bed",
             "Max 3 guests",
             "4 rooms available",
-            "Extra Mattress Provided on Request",
-          ]}
-        />
-        <RoomCard
-          title="Twin Bed Room"
-          description="A cozy twin bed room with panoramic valley views and a private balcony for ultimate relaxation."
-          roomImage={Room2}
-          price="Rs. 18,000/day"
-          buttonText="Book Now"
-          services={[
-           
-            "First Floor",
-            "2 single beds",
-            "Max 3 guests",
-            "2 rooms available",
             "Extra Mattress Provided on Request",
           ]}
         />
