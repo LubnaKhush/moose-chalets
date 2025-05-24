@@ -68,14 +68,14 @@ function RoomCategories() {
           title="Twin Bed Room"
           description="A cozy twin bed room with panoramic valley views and a private balcony for ultimate relaxation."
           roomImage={Room2}
-          price="Rs. 20,000/day"
+          price="Rs. 18,000/day"
           buttonText="Book Now"
           services={[
            
-            "First Floor",
-            "2 single beds",
+            "Ground Floor",
+            "2 twin beds",
+            "1 king bed",
             "Max 3 guests",
-            "2 rooms available",
             "Extra Mattress Provided on Request",
           ]}
         />
@@ -83,14 +83,13 @@ function RoomCategories() {
           title="King Bed Room"
           description="Relax in a spacious king-size bedroom featuring stunning valley views and a private balcony for your comfort."
           roomImage={Room1}
-          price="Rs. 18,000/day"
+          price="Rs. 20,000/day"
           buttonText="Book Now"
           services={[
           
-            'Ground Floor', 
-            "King-size bed",
+            'First Floor', 
+            "3 king beds",
             "Max 3 guests",
-            "4 rooms available",
             "Extra Mattress Provided on Request",
           ]}
         />
