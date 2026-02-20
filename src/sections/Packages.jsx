@@ -68,7 +68,7 @@ function RoomCategories() {
           title="Twin Bed Room"
           description="A cozy twin bed room with panoramic valley views and a private balcony for ultimate relaxation."
           roomImage={Room2}
-          price="Rs. 18,000/day"
+          price="Rs. 20,000/day"
           buttonText="Book Now"
           services={[
            
