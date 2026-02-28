@@ -16,8 +16,6 @@ const client = createClient({
 });
 
 // Fetch blogs
-
-useEffect(() => {
 async function fetchBlogs() {
   try {
     const response = await client.getEntries({
@@ -56,7 +54,7 @@ async function fetchBlogs() {
     return [];
   }
 }
-
+useEffect(() => {
   fetchBlogs()
   }, []); // Empty array means "run once on mount"
 
