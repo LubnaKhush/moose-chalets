@@ -1,6 +1,5 @@
 "use client";
-
-import React from "react";
+import React, { useEffect } from 'react';
 import { createClient } from "contentful";
 import Head from "next/head";
 import { FaArrowRight } from "react-icons/fa";
@@ -17,6 +16,8 @@ const client = createClient({
 });
 
 // Fetch blogs
+
+useEffect(() => {
 async function fetchBlogs() {
   try {
     const response = await client.getEntries({
@@ -55,6 +56,9 @@ async function fetchBlogs() {
     return [];
   }
 }
+
+  fetchBlogs()
+  }, []); // Empty array means "run once on mount"
 
 // Main Blogs Page
 export default async function Blogs() {
