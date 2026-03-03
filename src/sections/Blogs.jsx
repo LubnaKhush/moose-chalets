@@ -1,5 +1,6 @@
 "use client";
-import React, { useEffect,useState } from 'react';
+
+import React from "react";
 import { createClient } from "contentful";
 import Head from "next/head";
 import { FaArrowRight } from "react-icons/fa";
@@ -8,12 +9,6 @@ import Link from "next/link";
 
 
 
-
-// Main Blogs Page
-export default async function Blogs() {
-  const [blogs, setBlogs] = useState([]);
-
-  
 // Setup Contentful client
 const client = createClient({
   space: "zxs06frhu7q6",
@@ -22,51 +17,48 @@ const client = createClient({
 });
 
 // Fetch blogs
+async function fetchBlogs() {
+  try {
+    const response = await client.getEntries({
+      content_type: "mooseChalets",
+    });
 
-
-  useEffect(() => {
-    async function fetchBlogs() {
-      try {
-        const response = await client.getEntries({
-          content_type: "mooseChalets",
-        });
-
-        const assetMap = {};
-        if (response.includes?.Asset) {
-          response.includes.Asset.forEach((asset) => {
-            assetMap[asset.sys.id] = asset.fields.file.url;
-          });
-        }
-
-        const formattedBlogs = response.items.map((item) => {
-          const fields = item?.fields;
-          const sys = item?.sys;
-
-          const thumbnailId = fields.thumbnail?.sys?.id;
-          const thumbnailUrl = thumbnailId
-            ? "https:" + assetMap[thumbnailId]
-            : null;
-
-          return {
-            id: sys?.id,
-            title: fields?.blogTitle,
-            summary: fields?.cardSummary,
-            body: fields?.blogbody || "",
-            publishDate: fields?.publishDate,
-            thumbnail: thumbnailUrl,
-            category: fields?.category || "Travel",
-          };
-        });
-
-        setBlogs(formattedBlogs);
-      } catch (error) {
-        console.error("Error fetching blogs:", error);
-      }
+    const assetMap = {};
+    if (response.includes?.Asset) {
+      response.includes.Asset.forEach((asset) => {
+        assetMap[asset.sys.id] = asset.fields.file.url;
+      });
     }
 
-    fetchBlogs();
-  }, []);
-  
+    const blogs = response.items.map((item) => {
+      const fields = item.fields;
+      const sys = item.sys;
+      const thumbnailId = fields.thumbnail?.sys?.id;
+      const thumbnailUrl = thumbnailId
+        ? "https:" + assetMap[thumbnailId]
+        : null;
+
+      return {
+        id: sys.id,
+        title: fields.blogTitle,
+        summary: fields.cardSummary,
+        body: fields.blogbody || "",
+        publishDate: fields.publishDate,
+        thumbnail: thumbnailUrl,
+        category: fields.category || "Travel",
+      };
+    });
+
+    return blogs;
+  } catch (error) {
+    console.error("Error fetching blogs:", error);
+    return [];
+  }
+}
+
+// Main Blogs Page
+export default async function Blogs() {
+  const blogs = await fetchBlogs();
 
   return (
     <div id="blog" className="w-full bg-sectionBackground py-16 px-6">
