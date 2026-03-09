@@ -30,9 +30,9 @@ const Footer = () => {
         backgroundRepeat: "no-repeat",
       }}
     >
-     
+
       <div className="bg-[#123a1a]  opacity-90 py-16 px-6 md:px-12 flex flex-col md:flex-row justify-between space-y-8 md:space-y-0">
-      
+
         <div className="flex-1">
           <h2 className="text-lg font-semibold  border-l-[7px] p-[10px] border-[#19F745]">
             Stunning Valley Views
@@ -130,14 +130,15 @@ const Footer = () => {
         </div>
       </div>
       <div className="bg-[#123a1a] border-t-2 opacity-95 text-center pt-6 md:pt-4 text-sm">
-        Copyright © 2025 Moose Chalets. All rights reserved <br />
-        <div className="flex justify-center gap-1 mt-1  pb-3 ">
-         
-        <a href="https://github.com/CH-Umar-Aslam" target="_blank">
+        <p>
+          Copyright © {new Date().getFullYear()} Moose Chalets. All rights reserved
+        </p>        <div className="flex justify-center gap-1 mt-1  pb-3 ">
 
-          <p className="text-xs text-green-300 ">
-            Developed by <strong>Umar Aslam</strong>
-          </p>
+          <a href="https://github.com/CH-Umar-Aslam" target="_blank">
+
+            <p className="text-xs text-green-300 ">
+              Developed by <strong>Umar Aslam</strong>
+            </p>
           </a>
         </div>
       </div>
