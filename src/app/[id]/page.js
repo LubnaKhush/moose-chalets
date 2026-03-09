@@ -1,4 +1,5 @@
-
+export const dynamic = "force-static";
+export const revalidate = 60;
 import { createClient } from 'contentful';
 import React from 'react';
 import { notFound } from 'next/navigation';
@@ -123,7 +124,7 @@ export default async function SingleBlogPage({ params }) {
         
         <div className="relative z-10 max-w-6xl mx-auto px-6 h-full flex flex-col justify-end pb-8">
           <div className="mb-6">
-            <Link href="/" className="inline-flex items-center text-white hover:text-green-400 transition-colors">
+            <Link href="/" prefetch={false} className="inline-flex items-center text-white hover:text-green-400 transition-colors">
               <ChevronLeft className="w-5 h-5 text-white mr-1" />
               <span className=' text-lg'>Back to Blogs</span>
             </Link>

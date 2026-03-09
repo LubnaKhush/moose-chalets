@@ -1,12 +1,12 @@
-"use client";
-
+export const dynamic = "force-static";
+export const revalidate = 60;
 import React from "react";
 import { createClient } from "contentful";
 import Head from "next/head";
 import { FaArrowRight } from "react-icons/fa";
 import ReactMarkdown from "react-markdown";
 import Link from "next/link";
-
+import { headers } from 'next/headers'
 
 
 // Setup Contentful client
@@ -17,6 +17,7 @@ const client = createClient({
 });
 
 // Fetch blogs
+
 async function fetchBlogs() {
   try {
     const response = await client.getEntries({
